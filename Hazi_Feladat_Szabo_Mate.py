@@ -37,5 +37,5 @@ def feladat_3(x):
 def main():
     feladat_1(5,9)
     feladat_2()
-    feladat_3()
+    feladat_3(0.5)
 main()
