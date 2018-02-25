@@ -95,6 +95,56 @@ def feladat_8(x,a,b,c,d):
     else:
         print('4')
 
+def feladat_10(a,b):
+    db=0
+    for i in range(a,b):
+        if i%4==0 and (i%100!=0 or i%4==0):
+            db += 1
+    print(db," db szokoev volt/lesz a ket evszam kozott.")
+
+def feladat_12(maxpont,elert):
+    szazalek=(elert/maxpont)*100
+    if szazalek>=60:
+        print('Sikeres')
+    else:
+        print('Sikertelen')
+
+def feladat_14(hs): #honapsorszam
+    if hs==1:
+        print("Januar")
+    elif hs==2:
+        print("Februar")
+    elif hs==3:
+        print("Marcius")
+    elif hs==4:
+        print("Aprilis")
+    elif hs==5:
+        print("Majus")
+    elif hs==6:
+        print("Junius")
+    elif hs==7:
+        print("Julius")
+    elif hs==8:
+        print("Augusztus")
+    elif hs==9:
+        print("Szeptember")
+    elif hs==10:
+        print("Oktober")
+    elif hs==11:
+        print("November")
+    elif hs==12:
+        print("December")
+    else:
+        print('Hiba')
+
+def feladat_15(a,b):
+    hanyados=0
+    while a>=b:
+        hanyados += 1
+        a -= b
+        continue
+    print(hanyados)
+
 def main():
     feladat_1(5,9)
     feladat_2()
@@ -104,4 +154,8 @@ def main():
     feladat_6(3,4,5)
     feladat_7(50,25,150)
     feladat_8(11,2,4,5,8)
+    feladat_10(2000, 2014)
+    feladat_12(70, 120)
+    feladat_14(7)
+    feladat_15(250, 125)
 main()
