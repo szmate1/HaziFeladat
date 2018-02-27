@@ -145,6 +145,132 @@ def feladat_15(a,b):
         continue
     print(hanyados)
 
+def feladat_16(a,b):
+    r=a%b
+    while r !=0:
+        a=b
+        b=r
+        r=a%b
+    lnko=a
+    print(lnko)
+
+def feladat_17(szam):
+    masolat=szam
+    ujszam=0
+    while szam>0:
+        szamjegy=szam%10
+        ujszam=(ujszam*10)+szamjegy
+        szam=szam//10
+        continue
+    if ujszam==masolat:
+        print(True)
+    else:
+        print(False)
+
+def feladat_18(a,b):
+    x=a
+    y=b
+    p=0
+    while x>0:
+        if x%2!=0:
+            p=p+y
+        x=x//2
+        y=y+y
+    print(p)
+
+def feladat_19(n):
+    for i in range(3, n):
+        if n % i == 0:
+            print(False)
+    print(True)
+
+def feladat_20(n):
+    a = 0
+    b = 1
+    if n == 1:
+        print(a)
+    else:
+        if n == 2:
+            print(a,b)
+        else:
+            c = a+b
+            print(a,b,c)
+            k = 3
+            while k < n:
+                a = b
+                b = c
+                c = a+b
+                print(c)
+                k = k+1
+
+def feladat_21(n):
+    ujszam=0
+    while n != 0:
+        ujszam=(ujszam*10)+(n%10)
+        n=n//10
+    print(ujszam)
+
+def feladat_22(alap,kitevo):
+    eredmeny=1
+    while kitevo > 0:
+        if kitevo%2 != 0:
+            eredmeny = eredmeny*alap
+            kitevo -= 1
+        alap=alap*alap
+        kitevo=kitevo//2
+    print(eredmeny)
+
+def feladat_23(ig):
+    n = 1
+    while n <= ig:
+        sum = 0
+        oszto = 1
+        while oszto < n:
+            if not n % oszto:
+                sum += oszto
+            oszto = oszto + 1
+        if sum == n:
+            print(n, "tokeletes szam")
+        n = n + 1
+
+def feladat_24():
+    szam=1
+    s1=0
+    s2=0
+    while szam != 0:
+        szam=int(input('adj meg egy szamot: '))
+        if szam%7 == 5:
+            s1 += 1
+        if szam%13 == 7:
+            s2 += 1
+    print('7-tel valo osztas eseten',s1,'db szam maradeka volt 5.\n13-mal valo osztas eseten',s2,'db szam maradeka volt 7.')
+
+def feladat_25(lakossag,terulet):
+    nepsur=lakossag//terulet
+    print('az orszag nepsurusege: ', nepsur,'fo/km^2') #noszvaj
+    if nepsur < 50:
+        print('ritkan lakott')
+    elif 50 <= nepsur <= 300:
+        print('atlagos nepsurusegu')
+    else:
+        print('surun lakkott')
+
+def feladat_26():
+    szam=1
+    dbp=0
+    dbn=0
+    k=0
+    while szam != 0:
+        szam=int(input('adj meg egy szamot: '))
+        if szam>0:
+            dbp +=1
+        elif szam<0:
+            dbn +=1
+        ertek=k+szam
+        print(ertek)
+        k=ertek
+    print(dbp,'db pozitiv es ',dbn,'db negativ szamot adtal meg')
+
 def main():
     feladat_1(5,9)
     feladat_2()
@@ -158,4 +284,15 @@ def main():
     feladat_12(70, 120)
     feladat_14(7)
     feladat_15(250, 125)
+    feladat_16(360, 225)  # nem értem
+    feladat_17(1221)
+    feladat_18(45,17)
+    feladat_19(109)
+    feladat_20(9)
+    feladat_21(55362)
+    feladat_22(5,3)
+    feladat_23(500)
+    feladat_24()
+    feladat_25(1856,18.5)
+    feladat_26()
 main()
